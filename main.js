@@ -11,3 +11,11 @@ for (let i = 1; i <= N; i++){
 
 // Afficher le résultat
 alert(resultat);
+
+function addition(param1, param2){
+    for (let i = 1; i <= N; i++){
+        resultat = resultat + i;
+    }
+}
+
+return param1 + param2;
