@@ -1,12 +1,13 @@
 alert("Hello World!");
 
-//chaine de caractere
-var MaVariableString = "toto";
-//nombre
-var MaVariableNumerique = 100;
-//des tableaux
-var MaVariabletableau = ['Apple', 'Banana'];
-//des objets (ici la fenetre du navigateur )
-var MaVariableObjet = window;
+// Saisie nombre
+var N = prompt("Entrer un nombre");
+var resultat = 0;
 
-alert(MaVariableString + MaVariableNumerique + MaVariabletableau[0] + MaVariableObjet.location.pathname);
+// Boucle for Calcul factoriel de 1 à N
+for (let i = 1; i <= N; i++){
+    resultat = resultat + i;
+}
+
+// Afficher le résultat
+alert(resultat);
