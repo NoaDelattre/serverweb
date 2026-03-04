@@ -1,18 +1,24 @@
 alert("Hello World!");
 
-// Saisie nombre
+// Exercice 8
+
+//function ModifText(letext){
+    //alert("je vais modifier la div");
+    //const maDiv = document.getElementById("maDiveNum1");
+    //maDiv.textContent = letext;
+//}
+//ModifText("Hello");
+
+// Exercice 9
+
 var N = prompt("Entrer un nombre");
-var resultat = 0;
-var j = 0;
-function addition(param1, param2){
-    resultat = resultat + j;
-};
 
-// Boucle for Calcul factoriel de 1 à N
-for (let i = 1; i <= N; i++){
-    j = i;
-    addition();   
-};
-
-// Afficher le résultat
-alert(resultat);
+function ModifText(letext){
+    alert("je vais modifier les divs");
+    const mesDivs = document.getElementsByName("lesdivs");
+    for (let i = 0; i < N; i++){        
+        console.log(mesDivs[0].tagName);
+        mesDivs.textContent = letext;
+    }   
+}
+ModifText("Hello","Bonjour","Julien Code");
