@@ -13,14 +13,14 @@ alert("Hello World!");
 
 var N = prompt("Entrer un nombre");
 
-function ModifText(letext){
+function ModifText(lestext){
     alert("je vais modifier les divs");
     //const mesDivs = document.getElementsByName(div,"lesdivs");
     for (let i = 0; i < N; i++){        
-        //console.log(mesDivs[i].tagName);        
+        //console.log(mesDivs[i].tagName);             
         const upNames = document.getElementsByName("lesdivs");
         console.log(upNames[0].tagName); // affiche "INPUT"
-        upNames[i].value = letext;
+        upNames[i].value = lestext[i];
     }   
 }
-ModifText("Hello","Bonjour","Julien Code");
+ModifText(["Hello","Bonjour","Julien Code","67"]);
