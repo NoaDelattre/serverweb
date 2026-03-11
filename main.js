@@ -15,10 +15,12 @@ var N = prompt("Entrer un nombre");
 
 function ModifText(letext){
     alert("je vais modifier les divs");
-    const mesDivs = document.getElementsByName(div,"lesdivs");
+    //const mesDivs = document.getElementsByName(div,"lesdivs");
     for (let i = 0; i < N; i++){        
-        console.log(mesDivs[i].tagName);
-        mesDivs.textContent = letext;
+        //console.log(mesDivs[i].tagName);        
+        const upNames = document.getElementsByName("lesdivs");
+        console.log(upNames[0].tagName); // affiche "INPUT"
+        upNames[i].value = letext;
     }   
 }
 ModifText("Hello","Bonjour","Julien Code");
