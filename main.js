@@ -11,14 +11,20 @@ alert("Hello World!");
 
 // Exercice 9
 
-var N = prompt("Entrer un nombre");
+//var N = prompt("Entrer un nombre");
 
-function ModifText(lestext){
-    alert("je vais modifier les divs");
-    for (let i = 0; i < N; i++){                  
-        const upNames = document.getElementsByName("lesdivs");
-        console.log(upNames[0].tagName); // affiche "INPUT"
-        upNames[i].value = lestext[i];
-    }   
-}
-ModifText(["Hello","Bonjour","Julien Code","67"]);
+//function ModifText(lestext){
+    //alert("je vais modifier les divs");
+    //for (let i = 0; i < N; i++){                  
+        //const upNames = document.getElementsByName("lesdivs");
+        //console.log(upNames[0].tagName); // affiche "INPUT"
+        //upNames[i].value = lestext[i];
+    //}   
+//}
+//ModifText(["Hello","Bonjour","Julien Code","67"]);
+
+// Exercice 10
+
+// Test du bouillonnement 
+var maDiv = document.getElementById("methode2");
+maDiv.onclick = function(){alert('Bouton cliqué')};
