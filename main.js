@@ -15,9 +15,7 @@ var N = prompt("Entrer un nombre");
 
 function ModifText(lestext){
     alert("je vais modifier les divs");
-    //const mesDivs = document.getElementsByName(div,"lesdivs");
-    for (let i = 0; i < N; i++){        
-        //console.log(mesDivs[i].tagName);             
+    for (let i = 0; i < N; i++){                  
         const upNames = document.getElementsByName("lesdivs");
         console.log(upNames[0].tagName); // affiche "INPUT"
         upNames[i].value = lestext[i];
