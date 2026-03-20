@@ -25,6 +25,47 @@ alert("Hello World!");
 
 // Exercice 10
 
+// Test changement de texte avec un clic
+var MaDiv = document.getElementById("MaDiveNum1");
+
+MaDiv.addEventListener("click", UneProcedureQuiChangeLeText);
+
+function UneProcedureQuiChangeLeText(evenement){
+    // Attention aux majuscules
+    evenement.target.innerHTML = "On m'a cliqué dessus";
+}
+
+// Autres méthodes événement avec la souris
+var compteur = 0;
+var compteur2 = 0;
+
+var MaDiv2 = document.getElementById("methode2");
+MaDiv2.addEventListener("click", UneProcedureQuiChangeLeText);
+
+MaDiv2 = document.getElementById("methode3");
+MaDiv2.addEventListener("mouseover", UneProcedureQuiSurvole);
+
+MaDiv2 = document.getElementById("methode4");
+MaDiv2.addEventListener("keydown", UneProcedureQuiEcrit);
+
+function UneProcedureQuiEcrit(evenement){
+    evenement.target.innerHTML = "On m'a cliqué sur : "+evenement.key;
+}
+
+function UneProcedureQuiChangeleText2(evenement){
+    compteur++;
+    evenement.target.innerHTML = "On m'a cliqué dessus "+compteur+" fois.";
+}
+
+function UneProcedureQuiSurvole(evenement){
+    compteur2++;
+    evenement.target.innerHTML = "On m'a survolé "+compteur2+" fois.";
+}
+
+
+
+
+
 // Test du bouillonnement 
-var maDiv = document.getElementById("methode2");
-maDiv.onclick = function(){alert('Bouton cliqué')};
+//var maDiv = document.getElementById("methode67");
+//maDiv.onclick = function(){alert('Bouton cliqué')};
