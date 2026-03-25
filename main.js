@@ -40,26 +40,30 @@ function UneProcedureQuiChangeLeText(evenement){
 var compteur = 0;
 var compteur2 = 0;
 
+
+// Clic souris
 var MaDiv2 = document.getElementById("methode2");
 MaDiv2.addEventListener("click", UneProcedureQuiChangeleText2);
 
+// Survol souris
 MaDiv2 = document.getElementById("methode3");
 MaDiv2.addEventListener("mouseover", UneProcedureQuiSurvole);
 
+// Ecriture clavier
 MaDiv2 = document.getElementById("methode4");
 MaDiv2.addEventListener("keydown", UneProcedureQuiEcrit);
 
-// Ecriture clavier
-function UneProcedureQuiEcrit(evenement){
-    evenement.target.innerHTML = "On m'a cliqué sur : "+evenement.key;   
-}
+
+/*
+    FONCTIONS
+*/
 
 // Clic souris 
 function UneProcedureQuiChangeleText2(evenement){
     compteur++;
     evenement.target.innerHTML = "On m'a cliqué dessus "+compteur+" fois.";
-    if(MaDiv2.id == "methode2"){
-        MaDiv2.className = "divE";
+    if(evenement.target.id == "methode2"){
+        evenement.target.className = "divE"; // Pas de Div2, car la condition serait toujours fausse
     }
     
 }
@@ -68,10 +72,20 @@ function UneProcedureQuiChangeleText2(evenement){
 function UneProcedureQuiSurvole(evenement){
     compteur2++;
     evenement.target.innerHTML = "On m'a survolé "+compteur2+" fois.";
-
+    if(evenement.target.id == "methode3"){
+        let elt1 = document.getElementById("methode3");
+        elt1.style.color = "black";
+    }
 }
 
-
+// Ecriture clavier
+function UneProcedureQuiEcrit(evenement){
+    evenement.target.innerHTML = "On m'a cliqué sur : "+evenement.key;
+    if(evenement.target.id == "methode4"){
+        let elt1 = document.getElementById("methode4");
+        elt1.style.color = "green";
+    }   
+}
 
 
 
