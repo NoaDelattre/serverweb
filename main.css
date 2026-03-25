@@ -29,3 +29,12 @@ DIV{navigation: auto;}
     height: 100px;
     background-color: rgb(248, 255, 114)
 }
+
+DIV2{navigation: auto;}
+.divE{
+    float: left;
+    color: beige;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(58, 245, 20)
+}

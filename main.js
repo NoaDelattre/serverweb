@@ -30,6 +30,7 @@ var MaDiv = document.getElementById("MaDiveNum1");
 
 MaDiv.addEventListener("click", UneProcedureQuiChangeLeText);
 
+// Clic souris
 function UneProcedureQuiChangeLeText(evenement){
     // Attention aux majuscules
     evenement.target.innerHTML = "On m'a cliqué dessus";
@@ -40,7 +41,7 @@ var compteur = 0;
 var compteur2 = 0;
 
 var MaDiv2 = document.getElementById("methode2");
-MaDiv2.addEventListener("click", UneProcedureQuiChangeLeText);
+MaDiv2.addEventListener("click", UneProcedureQuiChangeleText2);
 
 MaDiv2 = document.getElementById("methode3");
 MaDiv2.addEventListener("mouseover", UneProcedureQuiSurvole);
@@ -48,18 +49,26 @@ MaDiv2.addEventListener("mouseover", UneProcedureQuiSurvole);
 MaDiv2 = document.getElementById("methode4");
 MaDiv2.addEventListener("keydown", UneProcedureQuiEcrit);
 
+// Ecriture clavier
 function UneProcedureQuiEcrit(evenement){
-    evenement.target.innerHTML = "On m'a cliqué sur : "+evenement.key;
+    evenement.target.innerHTML = "On m'a cliqué sur : "+evenement.key;   
 }
 
+// Clic souris 
 function UneProcedureQuiChangeleText2(evenement){
     compteur++;
     evenement.target.innerHTML = "On m'a cliqué dessus "+compteur+" fois.";
+    if(MaDiv2.id == "methode2"){
+        MaDiv2.className = "divE";
+    }
+    
 }
 
+// Survol souris
 function UneProcedureQuiSurvole(evenement){
     compteur2++;
     evenement.target.innerHTML = "On m'a survolé "+compteur2+" fois.";
+
 }
 
 
